@@ -2,12 +2,12 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="astrio_sample" translate="label" sortOrder="300">
+        <tab id="astrio_sample_tab" translate="label" sortOrder="300">
             <label>Astrio Sample</label>
         </tab>
         <section id="astrio_sample" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>Training Settings</label>
-            <tab>training_settings</tab>
+            <tab>astrio_sample_tab</tab>
             <resource>Astrio_Sample1::config</resource>
             <group id="training_settings" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>Training Settings</label>
