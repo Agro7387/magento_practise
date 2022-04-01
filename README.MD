@@ -1,3 +1,3 @@
 # magento practictice
 
-Практические задания из куса Magento от Astrio
+Практические задания из курса Magento от Astrio
