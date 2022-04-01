@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <astrio_sample>
+            <training_settings>
+                <custom_text_field>Test</custom_text_field>
+                <yes_no_fild>0</yes_no_fild>
+            </training_settings>
+        </astrio_sample>
+    </default>
+</config>
