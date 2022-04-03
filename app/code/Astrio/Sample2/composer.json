@@ -1,6 +1,6 @@
 {
-    "name": "astrio/magento-sample1",
-    "description": "magento module sample №1",
+    "name": "astrio/sample2",
+    "description": "magento module sample №2",
     "type": "magento2-module",
     "version": "1.0.0",
     "authors": [
@@ -10,12 +10,15 @@
             "role": "Developer"
         }
     ],
+    "require": {
+        "Astrio/Sample1": "*"
+    },
     "autoload": {
         "files": [
             "registration.php"
         ],
         "psr-4": {
-            "astrio\\magento-sample1\\": ""
+            "Astrio\\Sample2\\": ""
         }
     }
 }
