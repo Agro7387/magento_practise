@@ -21,6 +21,19 @@
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
             </group>
+            <group id="price_settings" translate="label" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Price Settings</label>
+                <field id="price_allowance" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Price allowance</label>
+                    <config_path>astrio_sample/price_settings/price_allowance</config_path>
+                    <validate>no-whitespace validate-number</validate>
+                </field>
+                <field id="price_allowance_yesno" translate="label" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Increase Price</label>
+                    <config_path>astrio_sample/price_settings/price_allowance_yesno</config_path>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
         </section>
     </system>
 </config>
