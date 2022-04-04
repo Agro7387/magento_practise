@@ -1,0 +1,21 @@
+{
+    "name": "astrio/sample1",
+    "description": "magento module sample №1",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Denis Tuktarov",
+            "email": "tuktarov-dg@yandex.ru",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Astrio\\Sample1\\": ""
+        }
+    }
+}
