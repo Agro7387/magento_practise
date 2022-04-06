@@ -3,7 +3,6 @@
 namespace Astrio\Sample1\Observer;
 
 use Magento\Framework\Event\ObserverInterface;
-use Magento\Framework\HTTP\PhpEnvironment\Request;
 use Psr\Log\LoggerInterface;
 
 class TrainingObserver implements ObserverInterface
@@ -14,18 +13,11 @@ class TrainingObserver implements ObserverInterface
     private $logger;
 
     /**
-     * @var \Magento\Framework\HTTP\PhpEnvironment\Request
-     */
-    private $request;
-
-    /**
      * @param \Magento\Captcha\Model\ResourceModel\LogFactory $resLogFactory
      */
     public function __construct(
-        LoggerInterface $logger,
-        Request $request
+        LoggerInterface $logger
     ) {
-        $this->request = $request;
         $this->logger = $logger;
     }
 
@@ -33,11 +25,12 @@ class TrainingObserver implements ObserverInterface
      * Reset Attempts For Frontend
      *
      * @param \Magento\Framework\Event\Observer $observer
-     * @return \Magento\Captcha\Observer\ResetAttemptForFrontendObserver
+     * @return path info
      */
     public function execute(\Magento\Framework\Event\Observer $observer)
     {
-        $path = $this->request->getPathInfo();
+        $request = $observer->getData('request');
+        $path = $request->getPathInfo();
         return $this->logger->info($path);
     }
 }
