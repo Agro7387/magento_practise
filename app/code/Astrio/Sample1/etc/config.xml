@@ -6,6 +6,10 @@
                 <custom_text_field>Test</custom_text_field>
                 <yes_no_fild>0</yes_no_fild>
             </training_settings>
+            <price_settings>
+                <price_allowance>0</price_allowance>
+                <price_allowance_yesno>1</price_allowance_yesno>
+            </price_settings>
         </astrio_sample>
     </default>
 </config>
