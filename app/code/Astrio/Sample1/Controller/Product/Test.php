@@ -2,7 +2,7 @@
 
 namespace Astrio\Sample1\Controller\Product;
 
-class View implements \Magento\Framework\App\ActionInterface
+class Test implements \Magento\Framework\App\ActionInterface
 {
     protected $resultJson;
     protected $urlInterface;
@@ -20,7 +20,7 @@ class View implements \Magento\Framework\App\ActionInterface
     {
         $data = [
             'message' => 'Learning Magento2 Controllers and routes',
-            'url' =>  $this->urlInterface->getUrl('catalog/product/view')
+            'url' =>  $this->urlInterface->getUrl('catalog/product/test')
         ];
 
         return $this->resultJson->setData($data);
