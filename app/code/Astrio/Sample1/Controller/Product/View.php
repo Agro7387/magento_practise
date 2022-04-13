@@ -2,27 +2,25 @@
 
 namespace Astrio\Sample1\Controller\Product;
 
-class View implements \Magento\Framework\App\ActionInterface
+use Magento\Framework\App\Action\Context;
+use Magento\Framework\View\Result\PageFactory;
+
+class View extends \Magento\Catalog\Controller\Product\View
 {
-    protected $resultJson;
-    protected $urlInterface;
-
+    /**
+     * Constructor
+     *
+     * @param Context $context
+     * @param \Magento\Catalog\Helper\Product\View $viewHelper
+     * @param \Magento\Framework\Controller\Result\ForwardFactory $resultForwardFactory
+     * @param PageFactory $resultPageFactory
+     */
     public function __construct(
-        \Magento\Framework\Controller\Result\Json $resultJson,
-        \Magento\Framework\UrlInterface $urlInterface
-        )
-    {
-        $this->resultJson = $resultJson;
-        $this->urlInterface = $urlInterface;
-    }
-
-    public function execute()
-    {
-        $data = [
-            'message' => 'Learning Magento2 Controllers and routes',
-            'url' =>  $this->urlInterface->getUrl('catalog/product/view')
-        ];
-
-        return $this->resultJson->setData($data);
+        Context $context,
+        \Magento\Catalog\Helper\Product\View $viewHelper,
+        \Magento\Framework\Controller\Result\ForwardFactory $resultForwardFactory,
+        PageFactory $resultPageFactory
+    ) {
+        parent::__construct($context, $viewHelper, $resultForwardFactory, $resultPageFactory);
     }
 }
