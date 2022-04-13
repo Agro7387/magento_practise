@@ -2,5 +2,6 @@
     <type name="\Magento\Catalog\Model\Product">
         <plugin name="asrioTrainingPlugin" type="Astrio\Sample1\Plugin\TrainingPlugin"/>
     </type>
-    <preference for="\Magento\Catalog\Model\Product" type="Astrio\Sample1\Rewrite\Magento\Catalog\Model\Product" />
+    <preference for="Magento\Catalog\Model\Product" type="Astrio\Sample1\Rewrite\Magento\Catalog\Model\Product" />
+    <preference for="Magento\Catalog\Block\Product\View\Description" type="Astrio\Sample1\Block\Rewrite\Product\View\Description" />
 </config>

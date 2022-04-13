@@ -2,31 +2,24 @@
 
 namespace Astrio\Sample1\Controller\TrainingFrontend;
 
-use Magento\Framework\UrlInterface;
+use Magento\Framework\View\Result\PageFactory;
+use Magento\Framework\App\Action\Context;
 
-
-class Learning implements \Magento\Framework\App\ActionInterface
+class Learning extends \Magento\Framework\App\Action\Action
 {
-    protected $resultJsonFactory;
-    protected $urlInterface;
+    protected $_pageFactory;
 
     public function __construct(
-        \Magento\Framework\Controller\Result\JsonFactory $resultJsonFactory,
-        UrlInterface $urlInterface
+        Context $context,
+        PageFactory $pageFactory
         )
     {
-        $this->resultJsonFactory = $resultJsonFactory;
-        $this->urlInterface = $urlInterface;
+        parent::__construct($context);
+        $this->_pageFactory = $pageFactory;
     }
 
     public function execute()
     {
-        $result = $this->resultJsonFactory->create();
-        $data = [
-            'message' => 'Learning Magento2 Controllers and routes',
-            'url' =>  $this->urlInterface->getUrl('training_frontend/TrainingFrontend/learning')
-        ];
-
-        return $result->setData($data);
+        return $this->_pageFactory->create();
     }
 }
