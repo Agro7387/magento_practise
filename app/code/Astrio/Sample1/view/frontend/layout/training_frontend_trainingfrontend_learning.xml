@@ -1,0 +1,18 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>My Title</title>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Astrio\Sample1\Block\LearningBlock" name="learninig.block"/>
+            <block class="Magento\Framework\View\Element\Text" name="learninig.block.text" after="learninig.block">
+                <arguments>
+                    <argument translate="true" name="text" xsi:type="string"> Test Text</argument>
+                </arguments>
+            </block>
+            <block class="Astrio\Sample1\Block\LearningTemplate" name="learninig.block.template" after="learninig.block.text" template="Astrio_Sample1::some_block.phtml"/>
+        </referenceContainer>
+        <referenceBlock name="learninig.default.template" remove="true"/>
+    </body>
+</page>

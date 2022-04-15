@@ -1,0 +1,6 @@
+<?php $block->getProduct()->setData('description', 'testTestTest'); ?>
+<?= /* @noEscape */ $this->helper(Magento\Catalog\Helper\Output::class)->productAttribute(
+    $block->getProduct(),
+    $block->getProduct()->getDescription(),
+    'description'
+) ?>

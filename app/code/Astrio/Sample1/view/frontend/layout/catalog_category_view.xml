@@ -1,0 +1,3 @@
+<page>
+    <move element="learninig.default.template" destination="content" after="category.product"/>
+</page>

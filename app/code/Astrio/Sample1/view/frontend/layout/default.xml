@@ -1,0 +1,20 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content.top">
+            <block class="Magento\Framework\View\Element\Template" name="learninig.default.template" template="Astrio_Sample1::default_block.phtml">
+                <arguments>
+                    <argument name="background_color" xsi:type="string">lightskyblue</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+        <referenceBlock name="header.links">
+        	<block class="Magento\Framework\View\Element\Html\Link" name="learninig.layout.top-link" before="-">
+            	<arguments>
+                	<argument name="label" xsi:type="string">My Link</argument>
+                	<argument name="path" xsi:type="string">training_frontend/trainingfrontend/learning</argument>
+            	</arguments>
+        	</block>
+    	</referenceBlock>
+    </body>
+</page>
