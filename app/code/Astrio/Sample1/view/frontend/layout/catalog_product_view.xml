@@ -5,5 +5,10 @@
                 <argument name="template" xsi:type="string">Astrio_Sample1::description_rewrite.phtml</argument>
             </action>
         </referenceBlock>
+        <referenceBlock name="learninig.default.template">
+            <arguments>
+                 <argument name="background_color" xsi:type="string">orange</argument>
+            </arguments>
+        </referenceBlock>
     </body>
 </page>

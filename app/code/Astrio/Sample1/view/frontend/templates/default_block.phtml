@@ -1,10 +1,4 @@
 <?php echo $block->getTemplate(); ?>
-<?php
-    $currentFullAction = $block->getRequest()->getFullActionName();
-    if ($currentFullAction === 'catalog_product_view' ) {
-        $this->setData('background_color', 'orange');
-    }
-?>
 <div style="background-color: <?= $this->getData('background_color') ?>">
     <?php echo 'lightskyblue' ?>
 </div>
